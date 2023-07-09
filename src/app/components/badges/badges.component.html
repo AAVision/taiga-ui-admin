@@ -1,0 +1,184 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Badges</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Basic
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <tui-badge class="tui-space_right-2" [value]="-6"></tui-badge>
+                <tui-badge status="primary" class="tui-space_right-2" [value]="6"></tui-badge>
+                <tui-badge status="success" value="Success" class="tui-space_right-2"></tui-badge>
+                <tui-badge status="error" value="Error" class="tui-space_right-2"></tui-badge>
+                <tui-badge status="warning" value="Warning" class="tui-space_right-2"></tui-badge>
+                <tui-badge status="neutral" value="Neutral" class="tui-space_right-2"></tui-badge>
+                <tui-badge status="info" value="Info" class="tui-space_right-2"></tui-badge>
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Sizes and hoverable
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-badge size="xs" value="Badge" class="tui-space_right-2" [hoverable]="true"></tui-badge>
+                <tui-badge size="s" value="Badge" class="tui-space_right-2" [hoverable]="true"></tui-badge>
+                <tui-badge size="m" value="Badge" class="tui-space_right-2" [hoverable]="true"></tui-badge>
+                <tui-badge size="l" value="Badge" [hoverable]="true"></tui-badge>
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Custom
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-badge size="l" class="badge" [value]="100" [hoverable]="true"></tui-badge>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                With icon
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-badge status="success" value="Taiga" class="tui-space_right-2">
+                    <tui-svg src="tuiIconHelpCircle"></tui-svg>
+                </tui-badge>
+
+                <tui-badge status="error" value="Taiga" class="tui-space_right-2">
+                    <tui-svg src="tuiIconHelpCircle"></tui-svg>
+                </tui-badge>
+
+                <tui-badge status="default" class="tui-space_right-2">
+                    <tui-svg src="tuiIconHelpCircle"></tui-svg>
+                </tui-badge>
+
+                <tui-badge status="error" value="Custom template" class="tui-space_right-2">
+                    <span class="custom-content"></span>
+                </tui-badge>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">BadgedContent</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                With notification
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <div>
+                    <tui-badged-content colorTop="var(--tui-error-fill)" size="l" class="tui-space_right-5 pb-6"
+                        [rounded]="true">
+                        <tui-avatar text="a b" size="l" [rounded]="true"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content colorBottom="var(--tui-success-fill)" size="l" class="tui-space_right-5"
+                        [rounded]="true">
+                        <tui-avatar text="c d" size="l" [rounded]="true"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content colorTop="var(--tui-success-fill)" colorBottom="var(--tui-error-fill)" size="l"
+                        class="tui-space_right-5" [rounded]="true">
+                        <tui-avatar text="e" size="l" [rounded]="true"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content colorTop="var(--tui-error-fill)" size="l" class="tui-space_right-5">
+                        <tui-avatar text="a b" size="l"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content colorBottom="var(--tui-success-fill)" size="l" class="tui-space_right-5">
+                        <tui-avatar text="c d" size="l"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content colorTop="var(--tui-success-fill)" colorBottom="var(--tui-error-fill)" size="l"
+                        class="tui-space_right-5">
+                        <tui-avatar text="e" size="l"></tui-avatar>
+                    </tui-badged-content>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                With a badge and icon
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <div>
+                    <tui-badged-content contentTop="tuiIconCheckCircleLarge" colorTop="var(--tui-error-fill)" size="l"
+                        class="tui-space_right-5 pb-6" [rounded]="true">
+                        <tui-avatar text="a b" size="l" [rounded]="true"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content colorBottom="var(--tui-success-fill)" size="l" class="tui-space_right-5"
+                        [contentBottom]="64" [rounded]="true">
+                        <tui-avatar text="c d" size="l" [rounded]="true"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content contentBottom="tuiIconSettings" colorTop="var(--tui-success-fill)"
+                        colorBottom="var(--tui-error-fill)" size="l" class="tui-space_right-5" [contentTop]="64"
+                        [rounded]="true">
+                        <tui-avatar text="e" size="l" [rounded]="true"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content colorTop="var(--tui-error-fill)" size="l" class="tui-space_right-5"
+                        [contentTop]="64">
+                        <tui-avatar text="a b" size="l"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content contentBottom="tuiIconSettings" colorBottom="var(--tui-success-fill)" size="l"
+                        class="tui-space_right-5">
+                        <tui-avatar text="c d" size="l"></tui-avatar>
+                    </tui-badged-content>
+
+                    <tui-badged-content contentBottom="tuiIconCheckCircleLarge" colorBottom="var(--tui-error-fill)"
+                        size="l" class="tui-space_right-5" [contentTop]="64">
+                        <tui-avatar text="e" size="l"></tui-avatar>
+                    </tui-badged-content>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

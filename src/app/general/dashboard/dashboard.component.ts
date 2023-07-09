@@ -21,4 +21,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 })
 export class DashboardComponent {
+  items: any = [
+    {
+      id: "1",
+      name: "Buttons",
+      routerLink: "/dashboard/buttons"
+    }
+  ];
 }

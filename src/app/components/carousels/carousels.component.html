@@ -1,0 +1,144 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Cards</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Basic
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <tui-carousel [duration]="4000" [(index)]="index">
+                    <ng-container *ngFor="let item of items">
+                        <tui-island *tuiItem>
+                            <h2 class="tui-island__title">{{ item }}</h2>
+                            <!-- TODO: update documentation here -->
+                            <a tuiButton href="https://en.wikipedia.org/wiki/{{ item }}">
+                                Wiki
+                            </a>
+                        </tui-island>
+                    </ng-container>
+                </tui-carousel>
+
+                <div class="pt-5 text-center">
+                    <tui-pagination size="s" [length]="items.length" [(index)]="index"></tui-pagination>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Custom
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <div tuiCarouselButtons class="flex ">
+                    <button tuiIconButton icon="tuiIconChevronLeftLarge" title="Previous" type="button"
+                        (click)="carousel.prev()"></button>
+                    <tui-carousel #carousel class="carousel">
+                        <tui-island *tuiItem>
+                            <h2 class="tui-island__title">Monty Python and the Holy Grail</h2>
+                            <p>
+                                King Arthur and his Knights of the Round Table embark on a surreal, low-budget search
+                                for the Holy
+                                Grail, encountering many, very silly obstacles.
+                            </p>
+                            <div>
+                                <button tuiButton appearance="primary" type="button">
+                                    Buy $
+                                    <tui-money [value]="12.99"></tui-money>
+                                </button>
+                                <button tuiButton type="button" class="tui-space_left-2">
+                                    Rent $
+                                    <tui-money [value]="4.99"></tui-money>
+                                </button>
+                            </div>
+                        </tui-island>
+                        <tui-island *tuiItem>
+                            <tui-loader></tui-loader>
+                        </tui-island>
+                        <tui-island *tuiItem class="tui-island_text-align_center">
+                            <h2 class="tui-island__title">Failed to load</h2>
+                            <p>
+                                <tui-marker-icon mode="error" src="tuiIconCloseLarge"></tui-marker-icon>
+                            </p>
+                        </tui-island>
+                    </tui-carousel>
+                    <button tuiIconButton type="button" icon="tuiIconChevronRightLarge" title="Next"
+                        (click)="carousel.next()"></button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Carousel inside dialog
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <button tuiButton size="m" type="button" (click)="onClick()">
+                    Show dialog with carousel
+                </button>
+
+                <ng-template #header>
+                    <div class="header" [style.backgroundImage]="background"></div>
+                </ng-template>
+                <ng-template [tuiDialogOptions]="{size: 's', header: header}" [(tuiDialog)]="open">
+                    <div tuiCarouselButtons class="flex " (touchstart.passive.stop)="(0)">
+                        <button tuiIconButton tuiMode="onDark" type="button" icon="tuiIconChevronLeftLarge"
+                            class="tui-space_right-4" (click)="navigate(-1)"></button>
+                        <tui-carousel [(index)]="index2">
+                            <div *tuiItem>
+                                <h2>Carousel is awesome</h2>
+                                <p>It can show arbitrary content and it's very easy to control</p>
+                            </div>
+                            <div *tuiItem>
+                                <h2>Pagination</h2>
+                                <p>
+                                    You can use
+                                    <a tuiLink routerLink="/components/pagination">
+                                        Pagination
+                                    </a>
+                                    component with size 's' together with it
+                                </p>
+                            </div>
+                            <div *tuiItem>
+                                <h2>Buttons</h2>
+                                <p>
+                                    Use
+                                    <code>tuiCarouselButtons</code>
+                                    directive to setup navigation buttons
+                                </p>
+                            </div>
+                        </tui-carousel>
+                        <button tuiIconButton tuiMode="onDark" type="button" icon="tuiIconChevronRightLarge"
+                            class="tui-space_left-4" (click)="navigate(1)"></button>
+                    </div>
+                    <tui-pagination size="s" class="tui-space_top-4" [length]="3" [(index)]="index2"></tui-pagination>
+                    <div class="tui-space_top-4">
+                        <button tuiButton type="button" appearance="primary" (click)="open = false">
+                            Got it!
+                        </button>
+                    </div>
+                </ng-template>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

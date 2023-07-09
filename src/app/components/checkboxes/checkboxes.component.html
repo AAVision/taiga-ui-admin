@@ -1,0 +1,209 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">CheckBox</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Basic
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <form [formGroup]="checkbox">
+                    <tui-checkbox formControlName="testValue1" class="tui-space_bottom-3"></tui-checkbox>
+
+                    <tui-checkbox formControlName="testValue2" class="tui-space_bottom-3"></tui-checkbox>
+
+                    <tui-checkbox formControlName="testValue3" class="tui-space_bottom-3"></tui-checkbox>
+
+                    <tui-checkbox formControlName="testValue4"></tui-checkbox>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Big size
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <form [formGroup]="checkbox">
+                    <tui-checkbox formControlName="testValue1" size="l" class="tui-space_bottom-3"></tui-checkbox>
+
+                    <tui-checkbox formControlName="testValue2" size="l" class="tui-space_bottom-3"></tui-checkbox>
+
+                    <tui-checkbox formControlName="testValue3" size="l" class="tui-space_bottom-3"></tui-checkbox>
+
+                    <tui-checkbox formControlName="testValue4" size="l"></tui-checkbox>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">CheckBoxBlock</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Sizes
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <form [formGroup]="checkboxBlock1">
+                    <div class="tui-form__row">
+                        <tui-checkbox-block formControlName="testValue1" contentAlign="right" size="s">
+                            Qiwi
+                        </tui-checkbox-block>
+                    </div>
+                    <div class="tui-form__row">
+                        <tui-checkbox-block formControlName="testValue2" contentAlign="right" size="m">
+                            Oranges
+                        </tui-checkbox-block>
+                    </div>
+                    <div class="tui-form__row">
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue3" size="l">
+                            Apples
+                        </tui-checkbox-block>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Groups
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <h3 class="title">Horizontal group</h3>
+                <form class="group" [formGroup]="checkboxBlock2">
+                    <div tuiGroup class="group" [collapsed]="true">
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue1" size="l">
+                            Oranges
+                        </tui-checkbox-block>
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue2" size="l">
+                            Apples
+                        </tui-checkbox-block>
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue3" size="l">
+                            Pineapples
+                        </tui-checkbox-block>
+                    </div>
+                </form>
+                <h3 class="title">Vertical group</h3>
+                <form [formGroup]="checkboxBlock2" class="ml-4">
+                    <div tuiGroup orientation="vertical" class="group" [collapsed]="true">
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue1" size="l">
+                            Oranges
+                        </tui-checkbox-block>
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue2" size="l">
+                            Apples
+                        </tui-checkbox-block>
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue3" size="l">
+                            Pineapples
+                        </tui-checkbox-block>
+                    </div>
+                </form>
+   
+                <form class="group" [formGroup]="checkboxBlock2">
+                    <div tuiGroup class="group" [collapsed]="true">
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue1" size="l"
+                            [hideCheckbox]="true">
+                            Oranges
+                        </tui-checkbox-block>
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue2" size="l"
+                            [hideCheckbox]="true">
+                            Apples
+                        </tui-checkbox-block>
+                        <tui-checkbox-block contentAlign="right" formControlName="testValue3" size="l"
+                            [hideCheckbox]="true">
+                            Pineapples
+                        </tui-checkbox-block>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="pb-6 text-xl font-semibold text-gray-900">
+            Custom
+        </h2>
+
+        <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+
+            <form class="b-form" [formGroup]="checkboxBlock3">
+                <div class="tui-form__row">
+                    <tui-checkbox-block formControlName="testValue1" size="l">
+                        <div class="content">
+                            <tui-avatar text="Heading" size="s" class="tui-space_right-3" [rounded]="true"></tui-avatar>
+                            Heading
+                        </div>
+                    </tui-checkbox-block>
+                </div>
+                <div class="tui-form__row">
+                    <tui-checkbox-block formControlName="testValue2" size="l">
+                        <div class="content">
+                            <tui-avatar text="placeholder" size="s" class="tui-space_right-3"
+                                [rounded]="true"></tui-avatar>
+                            <div>
+                                <div class="label">Label</div>
+                                Placeholder
+                            </div>
+                        </div>
+                    </tui-checkbox-block>
+                </div>
+                <div class="tui-form__row">
+                    <tui-checkbox-block formControlName="testValue3" size="l">
+                        <div class="inner">
+                            Heading
+                            <div class="text">
+                                Lorem ipsum dolor sit amet, 
+                            </div>
+                        </div>
+                    </tui-checkbox-block>
+                </div>
+                <div class="tui-form__row">
+                    <tui-checkbox-block formControlName="testValue4" contentAlign="left" nativeId="example3" size="l">
+                        <div class="inner inner_flex">
+                            Some heading
+                            <tui-tooltip describeId="example3" content="some tooltip content"></tui-tooltip>
+                        </div>
+                    </tui-checkbox-block>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,112 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Avatar</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                General
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-avatar class="tui-space_top-1" [avatarUrl]="avatar"></tui-avatar>
+                <tui-avatar text="alex inkin" class="tui-space_top-1"></tui-avatar>
+                <tui-avatar text="dmitriy demenskiy" size="l" class="tui-space_top-1" [rounded]="true"></tui-avatar>
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Colors
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-avatar text="Yulia Tsareva" class="tui-space_top-1" [autoColor]="true"></tui-avatar>
+                <tui-avatar text="Alex Inkin" class="tui-space_top-1" [autoColor]="true"></tui-avatar>
+                <tui-avatar text="Dmitriy Demenskiy" class="tui-space_top-1" [autoColor]="true"></tui-avatar>
+                <tui-avatar text="Evgeniy Mamaev" class="custom tui-space_top-1"></tui-avatar>
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Options
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-avatar text="Yulia Tsareva" class="tui-space_top-1"></tui-avatar>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Stacking avatars
+            </h2>
+
+            <div class="mt-4 leading-relaxed">
+                <div class="tui-avatar-stack">
+                    <tui-avatar *ngFor="let user of users" [autoColor]="true" [text]="user"></tui-avatar>
+                </div>
+
+                <div class="tui-avatar-stack reversed">
+                    <tui-avatar *ngFor="let user of users" size="l" [rounded]="true" [autoColor]="true"
+                        [text]="user"></tui-avatar>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Icons
+            </h2>
+
+            <div class="mt-4 leading-relaxed grid grid-cols-1 md:grid-cols-4 gap-1 lg:gap-1">
+                <tui-avatar new text="alex inkin" size="xxs" avatarUrl="tuiIconUser"></tui-avatar>
+                <tui-avatar new text="alex inkin" size="xs" avatarUrl="tuiIconUser"
+                    class="tui-space_vertical-1"></tui-avatar>
+                <tui-avatar new text="alex inkin" size="s" avatarUrl="tuiIconUser"
+                    class="tui-space_vertical-1"></tui-avatar>
+                <tui-avatar new text="alex inkin" size="m" avatarUrl="tuiIconUser"></tui-avatar>
+                <tui-avatar new text="alex inkin" size="l" avatarUrl="tuiIconUser"
+                    class="tui-space_vertical-1"></tui-avatar>
+                <tui-avatar new text="alex inkin" size="xl" avatarUrl="tuiIconUser"
+                    class="tui-space_vertical-1"></tui-avatar>
+                <tui-avatar new text="alex inkin" size="xxl" avatarUrl="tuiIconUser"></tui-avatar>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Icons
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-avatar new class="avatar" [avatarUrl]="waterplea"></tui-avatar>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Color Picker</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                InputColor
+            </h2>
+
+            <div class="mt-4 leading-relaxed pb-6">
+                <tui-input-color class="b-form" [colors]="palette1" [(ngModel)]="color">
+                    Background color
+                </tui-input-color>
+                <tui-input-color tuiTextfieldSize="m" class="b-form tui-space_vertical-2" [colors]="palette1"
+                    [(ngModel)]="color">
+                    Background color
+                </tui-input-color>
+                <tui-input-color tuiTextfieldSize="s" class="b-form" [colors]="palette1" [(ngModel)]="color">
+                    Background color
+                </tui-input-color>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                ColorSelector in dropdown
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-hosted-dropdown tuiDropdownAlign="left" [content]="picker" [tuiDropdownMaxHeight]="999">
+                    <button tuiButton type="button" appearance="" automation-id="color-picker__button"
+                        [style.background]="background" [style.color]="background">
+                        <span class="invert">Color me Kubrick</span>
+                    </button>
+                </tui-hosted-dropdown>
+                <ng-template #picker let-activeZone>
+                    <tui-color-selector [tuiActiveZoneParent]="activeZone" [(color)]="color2"></tui-color-selector>
+                </ng-template>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Palette in dropdown
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-hosted-dropdown tuiDropdownAlign="left" [content]="palette" [tuiDropdownMaxHeight]="999">
+                    <button tuiButton type="button" appearance="" automation-id="color-picker__button"
+                        [style.background]="color$ | async">
+                        Palette only
+                    </button>
+                </tui-hosted-dropdown>
+                <ng-template #palette>
+                    <tui-palette [colors]="colors3" (selectedColor)="updateColor($event)"></tui-palette>
+                </ng-template>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
