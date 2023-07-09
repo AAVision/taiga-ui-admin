@@ -1,5 +1,6 @@
 #sidebar {
     --tw-translate-x: -100%;
+    z-index: 99;
 }
 
 #menu-close-icon {
@@ -25,5 +26,6 @@
 @media (min-width: 768px) {
     #sidebar {
         --tw-translate-x: 0;
+        z-index: 99;
     }
 }

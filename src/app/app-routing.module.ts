@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: '', redirectTo: 'login', pathMatch: 'full'
+  },
+  {
     path: 'login', loadComponent: () =>
       import('./general/login/login.component').then((m) => m.LoginComponent)
   },
@@ -19,6 +22,10 @@ export const routes: Routes = [
       {
         path: 'accordions',
         loadComponent: () => import('./components/accordion/accordion.component').then((m) => m.AccordionComponent)
+      },
+      {
+        path: 'charts',
+        loadComponent: () => import('./components/charts/charts.component').then((m) => m.ChartsComponent)
       },
     ]
   }

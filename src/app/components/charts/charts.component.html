@@ -1,0 +1,44 @@
+<!-- <h1 class="mb-6 text-2xl font-semibold text-gray-900">Charts</h1>
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            BarChart | With axes
+        </h2>
+
+        <div class="mt-4">
+            <tui-axes class="axes" [axisXLabels]="labelsX" [axisYLabels]="labelsY">
+                <tui-bar-chart [max]="10000" [value]="value"></tui-bar-chart>
+            </tui-axes>
+        </div>
+    </div>
+
+</div>
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            BarChart | With axes
+        </h2>
+
+        <div class="mt-4">
+            <div class="wrapper">
+                <tui-ring-chart [value]="value2" [(activeItemIndex)]="activeItemIndex">
+                    <tui-money [singleColor]="true" [value]="sum"></tui-money>
+                    <div>Total</div>
+                </tui-ring-chart>
+
+                <div class="legend">
+                    <tui-legend-item *ngFor="let label of labels; let index = index" size="s" class="item"
+                        [color]="getColor(index)" [text]="label" [active]="isItemActive(index)"
+                       >
+                        <tui-money [singleColor]="true" [value]="value2[index]"></tui-money>
+                    </tui-legend-item>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> -->

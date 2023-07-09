@@ -14,7 +14,7 @@ bootstrapApplication(AppComponent, {
       BrowserModule,
       RouterModule,
       RouterModule.forRoot(routes, {
-        // useHash: true,
+        useHash: true,
         scrollPositionRestoration: 'top'
       }),
 
