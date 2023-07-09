@@ -1,1 +1,155 @@
-<p>button works!</p>
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Buttons</h1>
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            General
+        </h2>
+
+        <div class="mt-4 leading-relaxed">
+            <ng-template #icon>
+                <tui-avatar size="xs" [rounded]="true" [avatarUrl]="avatarUrl"></tui-avatar>
+            </ng-template>
+            <h3>button[tuiButton]</h3>
+            <p>
+                <button tuiButton type="button" class="tui-space_right-3 tui-space_bottom-3" [icon]="icon"
+                    (click)="onClick($event)">
+                    Button
+                </button>
+
+                <button tuiButton type="button" iconRight="tuiIconSearch" class="tui-space_right-3 tui-space_bottom-3"
+                    [disabled]="true" (click)="onClick($event)">
+                    Disabled button
+                </button>
+
+                <button tuiButton type="button" class="tui-space_right-3 tui-space_bottom-3" [showLoader]="true"
+                    (click)="onClick($event)">
+                    Loading button
+                </button>
+
+                <button tuiButton type="button" [icon]="loader1" (click)="onClick($event)">
+                    Wait for it...
+                </button>
+                <ng-template #loader1>
+                    <tui-svg class="loader" [src]="loader"></tui-svg>
+                </ng-template>
+            </p>
+            <h3>button[tuiIconButton]</h3>
+            <p>
+                <button tuiIconButton type="button" class="tui-space_right-3 tui-space_bottom-3" [icon]="icon"
+                    (click)="onClick($event)"></button>
+
+                <button tuiIconButton type="button" icon="tuiIconSearch" class="tui-space_right-3 tui-space_bottom-3"
+                    [disabled]="true" (click)="onClick($event)"></button>
+
+                <button tuiIconButton type="button" class="tui-space_right-3 tui-space_bottom-3" [showLoader]="true"
+                    (click)="onClick($event)"></button>
+
+                <button tuiIconButton type="button" [icon]="loader2" (click)="onClick($event)"></button>
+                <ng-template #loader2>
+                    <tui-svg class="loader" [src]="loader"></tui-svg>
+                </ng-template>
+            </p>
+            <h3>a[tuiButton]</h3>
+            <p>
+                <a tuiButton type="button" href="http://google.com" class="tui-space_right-3 tui-space_bottom-3"
+                    [icon]="icon">
+                    Link
+                </a>
+
+                <a tuiButton class="tui-space_right-3 tui-space_bottom-3" [showLoader]="true">
+                    Loading button
+                </a>
+
+                <a tuiButton [icon]="loader3">
+                    Wait for it...
+                </a>
+                <ng-template #loader3>
+                    <tui-loader size="s" [inheritColor]="true" [showLoader]="true" [style.width.px]="30"
+                        [style.height.px]="30"></tui-loader>
+                </ng-template>
+            </p>
+            <h3>a[tuiIconButton]</h3>
+            <p>
+                <a tuiIconButton type="button" class="tui-space_right-3 tui-space_bottom-3" [icon]="icon"
+                    [routerLink]="['/tui-dropdown']"></a>
+
+                <a tuiIconButton type="button" icon="tuiIconSearch" class="tui-space_right-3 tui-space_bottom-3"
+                    [disabled]="true" [routerLink]="" tuiAutoFocus></a>
+
+                <a tuiIconButton type="button" class="tui-space_right-3 tui-space_bottom-3" [showLoader]="true"
+                    [routerLink]="" tuiAutoFocus></a>
+
+                <a tuiIconButton type="button" [routerLink]="" tuiAutoFocus [icon]="loader4"></a>
+                <ng-template #loader4>
+                    <tui-loader size="s" [inheritColor]="true" [showLoader]="true" [style.width.px]="30"
+                        [style.height.px]="30"></tui-loader>
+                </ng-template>
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            Custom padding
+        </h2>
+
+        <div class="mt-4 leading-relaxed">
+            <button tuiButton appearance="whiteblock-active" type="button" class="tui-space_right-4">
+                Padding
+            </button>
+            <button tuiButton size="m" appearance="whiteblock-active" type="button" class="tui-space_right-4">
+                Padding
+            </button>
+            <button tuiButton size="s" appearance="whiteblock-active" type="button" class="tui-space_right-4">
+                Padding
+            </button>
+            <button tuiButton size="xs" appearance="whiteblock-active" type="button">
+                Padding
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+<div
+    class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            Modes
+        </h2>
+
+        <div class="mt-4 leading-relaxed">
+            <button tuiButton type="button" appearance="primary" class="tui-space_right-3 tui-space_bottom-3">
+                primary
+            </button>
+            <button tuiButton type="button" appearance="secondary" class="tui-space_right-3 tui-space_bottom-3">
+                secondary
+            </button>
+            <button tuiButton type="button" appearance="secondary-destructive"
+                class="tui-space_right-3 tui-space_bottom-3">
+                secondary-destructive
+            </button>
+            <button tuiButton type="button" appearance="accent" class="tui-space_right-3 tui-space_bottom-3">
+                accent
+            </button>
+            <button tuiButton type="button" appearance="flat" class="tui-space_right-3 tui-space_bottom-3">
+                flat
+            </button>
+            <button tuiButton type="button" appearance="outline" class="tui-space_right-3 tui-space_bottom-3">
+                outline
+            </button>
+            <button tuiIconButton type="button" appearance="icon" icon="tuiIconCloseLarge"
+                class="tui-space_right-3 tui-space_bottom-3"></button>
+
+        </div>
+    </div>
+
+</div>

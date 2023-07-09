@@ -1,1 +1,83 @@
-<p>accordion works!</p>
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Buttons</h1>
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            Basic
+        </h2>
+
+        <div class="mt-4">
+            <tui-accordion>
+                <tui-accordion-item>
+                    Taiga UI cdk
+                    <ng-template tuiAccordionItemContent>
+                        Development kit consisting of the low level tools and abstractions used to develop Taiga UI
+                        Angular entities
+                    </ng-template>
+                </tui-accordion-item>
+                <tui-accordion-item>
+                    Taiga UI core
+                    <ng-template tuiAccordionItemContent>
+                        <div #content>
+                            Development kit consisting of the low level tools and abstractions used to develop Taiga UI
+                            Angular entities
+                        </div>
+                    </ng-template>
+                </tui-accordion-item>
+                <tui-accordion-item>
+                    Taiga UI kit
+                    <ng-template tuiAccordionItemContent>
+                        Development kit consisting of the low level tools and abstractions used to develop Taiga UI
+                        Angular entities
+                    </ng-template>
+                </tui-accordion-item>
+            </tui-accordion>
+
+        </div>
+    </div>
+
+</div>
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            Alone
+        </h2>
+
+        <div class="mt-4">
+            <tui-accordion-item class="w-full">
+                Taiga UI cdk
+                <ng-template tuiAccordionItemContent>
+                    Development kit consisting of the low level tools and abstractions used to develop Taiga UI
+                    Angular entities
+                </ng-template>
+            </tui-accordion-item>
+
+        </div>
+    </div>
+
+</div>
+
+<div
+    class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+    <div>
+        <h2 class="mt-6 text-xl font-semibold text-gray-900">
+            Eager and Lazy content
+        </h2>
+
+        <div class="mt-4">
+            <tui-accordion-item class="">
+                Taiga UI lazy
+                <ng-template tuiAccordionItemContent>I'm lazy content</ng-template>
+            </tui-accordion-item>
+
+            <tui-accordion-item class="pt-3">
+                Taiga UI eager
+                <div tuiAccordionItemContent>I'm eager content</div>
+            </tui-accordion-item>
+        </div>
+    </div>
+
+</div>
