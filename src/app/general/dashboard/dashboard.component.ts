@@ -2,8 +2,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { RouterModule } from '@angular/router';
-import { TuiSidebarModule } from '@taiga-ui/addon-mobile';
-import { TuiActiveZoneModule } from '@taiga-ui/cdk';
 import { TuiButtonModule } from '@taiga-ui/core';
 import { TuiSvgModule } from '@taiga-ui/core';
 import { TuiInputModule } from '@taiga-ui/kit';
@@ -14,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [
     CommonModule, TuiTabsModule, RouterModule,
-    TuiSidebarModule, TuiActiveZoneModule, TuiButtonModule,
+    TuiButtonModule,
     TuiSvgModule, TuiInputModule, ReactiveFormsModule
   ],
   templateUrl: './dashboard.component.html',
@@ -23,9 +21,4 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 })
 export class DashboardComponent {
-  open = false;
-
-  toggle(open: boolean) {
-    this.open = open;
-  }
 }

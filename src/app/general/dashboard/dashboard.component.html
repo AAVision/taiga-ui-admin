@@ -1,11 +1,6 @@
 <div class="relative min-h-screen md:flex" data-dev-hint="container">
     <input type="checkbox" id="menu-open" class="hidden" />
 
-    <label for="menu-open"
-        class="absolute right-2 bottom-2 shadow-lg rounded-full p-2 bg-gray-100 text-gray-600 md:hidden"
-        data-dev-hint="floating action button">
-        <img src="https://taiga-ui.dev/assets/images/taiga.svg" alt="">
-    </label>
 
     <header class="bg-gray-600 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
         <a href="#" class="block p-4 text-white font-bold whitespace-nowrap truncate">
@@ -76,10 +71,10 @@
         </nav>
     </aside>
 
-    <main id="content" class="flex-1 p-6 lg:px-8">
+    <main class="flex-1 p-6 lg:px-8 bg-gray-100">
         <div class="max-w-7xl mx-auto">
             <div class="px-4 py-6 sm:px-0">
-                <div class="h-screen">
+                <div class="h-full">
                     <router-outlet></router-outlet>
                 </div>
                 <!-- <div class="border-2 border-dashed border-[#ff7043] rounded-lg h-screen">
