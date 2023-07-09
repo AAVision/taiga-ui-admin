@@ -1,0 +1,63 @@
+<div class="flex justify-around items-center h-screen">
+    <div class="sm:w-50 md:w-50 lg:w-1/3">
+        <form [formGroup]="form">
+            <div class="tui-col_12">
+                <tui-island>
+                    <h3 class="tui-island__title">Sign in</h3>
+                    <p class="tui-island__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua.
+                    </p>
+                    <div class="tui-island__paragraph tui-island__paragraph_link">
+
+                        <div class="tui-form__row">
+                            <p>
+                                <tui-input formControlName="email"> Type an email </tui-input>
+                            </p>
+
+                        </div>
+
+                        <div class="tui-form__row">
+                            <p>
+                                <tui-input-password formControlName="password">
+                                    Type a password
+                                </tui-input-password>
+                            </p>
+                        </div>
+
+                        <div class="tui-form__row">
+                            <p>
+                                <tui-checkbox-labeled formControlName="remember">
+                                    Remember me?
+                                </tui-checkbox-labeled>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tui-island_text-align_right">
+                        <a tuiButton type="button" class="tui-form__buttons_align_end" appearance="accent"
+                            [routerLink]="['/dashboard']" size="m">
+                            Login
+                        </a>
+                    </div>
+
+
+                    <a tuiButton [routerLink]="['/register']" type="button" size="m" class="tui-island__footer-button"
+                        appearance="accent">
+                        Register
+                    </a>
+                </tui-island>
+
+
+            </div>
+        </form>
+    </div>
+
+    <div class="hidden lg:block motion-safe:hover:scale-[1.01] transition-all duration-250">
+        <div class="flex">
+            <img src="https://taiga-ui.dev/assets/images/taiga.svg" alt="">
+            <h1 class="text-xl font-semibold">Taiga UI Admin panel</h1>
+        </div>
+    </div>
+</div>
