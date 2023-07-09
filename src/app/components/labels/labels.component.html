@@ -1,0 +1,68 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Labels</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Basic
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <form class="b-form" [formGroup]="testForm">
+                    <label [tuiLabel]="label">
+                        <tui-input nativeId="uniqueId" formControlName="testValue" tuiTextfieldSize="m"
+                            [tuiTextfieldLabelOutside]="true">
+                            0,00
+                        </tui-input>
+                    </label>
+                    <ng-template #label>
+                        Sum
+                        <tui-tooltip describeId="uniqueId" content="I am a tooltip that is ready for Screen Readers"
+                            direction="top-right"></tui-tooltip>
+                    </ng-template>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Multiline
+            </h2>
+
+            <div class="mt-4 leading-relaxed">
+                <form class="b-form" [formGroup]="testForm2">
+                    <label
+                        tuiLabel="Some long content about money and incoice sums to make a multiline label and to show how it works with line breaks">
+                        <tui-input formControlName="testValue" tuiTextfieldSize="m" [tuiTextfieldLabelOutside]="true">
+                            0,00
+                        </tui-input>
+                    </label>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Text
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <label tuiLabel="Taiga">Angular Component Library</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">

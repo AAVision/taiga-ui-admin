@@ -1,0 +1,129 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Loaders</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Currency
+            </h2>
+
+            <div class="mt-4 leading-relaxed">
+                <ol>
+                    <li>
+                        <tui-money [currency]="null" [value]="10728.9"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money [value]="10728.9"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money currency="EUR" [value]="10728.9"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money currency="USD" [value]="10728.9"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money currency="GBP" [value]="10728.9"></tui-money>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Color
+            </h2>
+
+            <div class="mt-4 leading-relaxed">
+
+                <ol>
+                    <li>
+                        <tui-money [value]="150.5" [colored]="true"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money [value]="-150.5" [colored]="true"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money [value]="0" [colored]="true"></tui-money>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Size inheritance
+            </h2>
+
+            <div class="mt-4 leading-relaxed">
+                <ol>
+                    <li>
+                        <tui-money class="extra-large" [value]="10728.9"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money class="large" [value]="10728.9"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money class="medium" [value]="10728.9"></tui-money>
+                    </li>
+                    <li>
+                        <tui-money class="small" [value]="10728.9"></tui-money>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                In text
+            </h2>
+
+            <div class="mt-4 leading-relaxed">
+                You can use it inline =
+                <tui-money [value]="-12345.1" [singleColor]="true"></tui-money>
+                into your text that is cool!
+
+                <div class="tui-space_bottom-2">
+                    Deposit
+                    <tui-money [value]="7" [singleColor]="true"></tui-money>
+                    <span>,</span>
+                    and continue shopping.
+                </div>
+
+                <div class="tui-space_bottom-2">
+                    (8918 + 10333.6 + 3527.78 + 805.62 + 140) =
+                    <tui-money [value]="8918 + 10333.6 + 3527.78 + 805.62 + 140"></tui-money>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+<h1 class="text-right mb-6 text-md font-semibold text-gray-900">More Components
+    <a tuiLink href="#" target="_blank">
+        Money
+    </a>
+</h1>

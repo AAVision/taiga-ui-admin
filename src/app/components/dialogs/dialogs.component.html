@@ -1,0 +1,173 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Dilaogs</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Dialog from string
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
+                <button tuiButton type="button" size="m" class="tui-space_right-3 tui-space_bottom-3"
+                    (click)="showDialog()">
+                    Show
+                </button>
+
+                <button tuiButton type="button" size="m" class="tui-space_right-3 tui-space_bottom-3"
+                    (click)="showDialogWithCustomButton()">
+                    Show (custom button text)
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Dialog from template
+            </h2>
+
+            <div class="mt-4 leading-relaxed">
+                <p class="pb-2">
+                    Your balance:
+                    <tui-money [value]="money"></tui-money>
+                </p>
+                <button tuiButton type="button" size="m" (click)="showDialog2(template)">
+                    Show
+                </button>
+
+                <ng-template #template let-observer>
+                    <p>You can show a dialog with template</p>
+                    <p>
+                        Your balance:
+                        <tui-money [value]="money"></tui-money>
+                    </p>
+                    <button tuiButton type="button" size="m" class="tui-space_right-3" (click)="withdraw()">
+                        Withdraw&nbsp;
+                        <tui-money [value]="100"></tui-money>
+                    </button>
+                    <button tuiButton type="button" size="m" (click)="observer.complete()">
+                        Cancel
+                    </button>
+                </ng-template>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Mobile dialog
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+
+                <button tuiButton type="button" size="m" class="tui-space_right-3 tui-space_bottom-2"
+                    (click)="showDialog3(long, button)">
+                    Show long mobile dialog with filters
+                </button>
+
+                <ng-template #button>
+                    <button *ngIf="!filters" tuiButton type="button" tuiPreventDefault="touchmove" class="portal"
+                        (click)="onFilterClick()">
+                        Filters
+                    </button>
+                </ng-template>
+
+                <ng-template #long>
+                    <div class="background"></div>
+                    <header class="header" [style.transform]="transform" [style.width]="width"
+                        (tuiElasticSticky)="onElastic($event)">
+                        <section class="logo">
+                            <label class="date">8 March, 23:51</label>
+                            <tui-marker-icon src="tuiIconChevronDownLarge" class="icon"></tui-marker-icon>
+                        </section>
+                        <div class="wrapper">
+                            <p class="description">Card payment</p>
+                            <h3 class="title">Sushi</h3>
+                            <tui-money decimal="always" class="money" [value]="300"></tui-money>
+                        </div>
+                    </header>
+                    <blockquote>
+                        <h1>Additional information</h1>
+                        <p>
+                            In user interface design for computer applications, a modal window is a graphical control
+                            element
+                            subordinate to an application's main window. A modal window creates a mode that disables the
+                            main window but
+                            keeps it visible, with the modal window as a child window in front of it. Users must
+                            interact with the modal
+                            window before they can return to the parent application. This avoids interrupting the
+                            workflow on the main
+                            window. Modal windows are sometimes called heavy windows or modal dialogs because they often
+                            display a
+                            dialog box.
+                        </p>
+                    </blockquote>
+                    <blockquote>
+                        <h2>Additional information</h2>
+                        <p>
+                            In user interface design for computer applications, a modal window is a graphical control
+                            element
+                            subordinate to an application's main window. A modal window creates a mode that disables the
+                            main window but
+                            keeps it visible, with the modal window as a child window in front of it. Users must
+                            interact with the modal
+                            window before they can return to the parent application. This avoids interrupting the
+                            workflow on the main
+                            window. Modal windows are sometimes called heavy windows or modal dialogs because they often
+                            display a
+                            dialog box.
+                        </p>
+                    </blockquote>
+                </ng-template>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Prompt
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <button tuiButton size="m" (click)="onClick(content)">
+                    Open
+                </button>
+
+                <ng-template #content let-context>
+                    <tui-input class="tui-space_bottom-3" [ngModel]="value" (ngModelChange)="onModelChange($event)">
+                        Your name
+                    </tui-input>
+                    <button tuiButton (click)="context.complete()">
+                        Submit
+                    </button>
+                </ng-template>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+<h1 class="text-right mb-6 text-md font-semibold text-gray-900">More Components
+    <a tuiLink href="#" target="_blank">
+        Dialogs
+    </a>
+</h1>

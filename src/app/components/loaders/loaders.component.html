@@ -1,0 +1,110 @@
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Loaders</h1>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                Button with loader
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap justify-center">
+                <button tuiButton type="button" class="tui-space_right-2">
+                    Clickable button
+                </button>
+                <tui-loader class="inline-flex tui-space_right-2" [showLoader]="true" [inheritColor]="true"
+                    [overlay]="true">
+                    <button tuiButton type="button">
+                        Loading button
+                    </button>
+                </tui-loader>
+                <button tuiButton type="button">
+                    Useless button
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                With icon
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-loader class="inline-flex">
+                    <button tuiButton type="button">
+                        Loading button
+                    </button>
+                </tui-loader>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                With inherited background color
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-loader [inheritColor]="true">
+                    I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you
+                    I don't have
+                    money. But what I do have are a very particular set of skills; skills I have acquired over a very
+                    long career.
+                    Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the
+                    end of it. I will
+                    not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and
+                    I will kill
+                    you.
+                </tui-loader>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div
+        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
+        <div>
+            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+                With content overlay
+            </h2>
+
+            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
+                <tui-loader [overlay]="true">
+                    I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you
+                    I
+                    don't have
+                    money. But what I do have are a very particular set of skills; skills I have acquired over a very
+                    long
+                    career.
+                    Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the
+                    end
+                    of it. I will
+                    not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and
+                    I
+                    will kill
+                    you.
+                </tui-loader>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">

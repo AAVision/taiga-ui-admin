@@ -16,6 +16,9 @@ export const routes: Routes = [
       import('./general/dashboard/dashboard.component').then((m) => m.DashboardComponent),
     children: [
       {
+        path: '', redirectTo: 'charts', pathMatch: 'full'
+      },
+      {
         path: 'buttons',
         loadComponent: () => import('./components/button/button.component').then((m) => m.ButtonComponent)
       },
@@ -54,6 +57,38 @@ export const routes: Routes = [
       {
         path: 'colorpickers',
         loadComponent: () => import('./components/colorpickers/colorpickers.component').then((m) => m.ColorpickersComponent)
+      },
+      {
+        path: 'dialogs',
+        loadComponent: () => import('./components/dialogs/dialogs.component').then((m) => m.DialogsComponent)
+      },
+      {
+        path: 'expand',
+        loadComponent: () => import('./components/expand/expand.component').then((m) => m.ExpandComponent)
+      },
+      {
+        path: 'islands',
+        loadComponent: () => import('./components/islands/islands.component').then((m) => m.IslandsComponent)
+      },
+      {
+        path: 'labels',
+        loadComponent: () => import('./components/labels/labels.component').then((m) => m.LabelsComponent)
+      },
+      {
+        path: 'loaders',
+        loadComponent: () => import('./components/loaders/loaders.component').then((m) => m.LoadersComponent)
+      },
+      {
+        path: 'money',
+        loadComponent: () => import('./components/money/money.component').then((m) => m.MoneyComponent)
+      },
+      {
+        path: 'notifications',
+        loadComponent: () => import('./components/notifications/notifications.component').then((m) => m.NotificationsComponent)
+      },
+      {
+        path: 'pdf-viwer',
+        loadComponent: () => import('./components/pdf-viewer/pdf-viewer.component').then((m) => m.PdfViewerComponent)
       },
     ]
   }

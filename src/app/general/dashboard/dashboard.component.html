@@ -32,73 +32,10 @@
 
             <hr class="h-px my-8 bg-white border-0 dark:bg-white">
 
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/buttons']"
+            <nav data-dev-hint="main navigation" *ngFor="let item of items">
+                <a [routerLink]="item.routerLink"
                     class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Buttons</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/accordions']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Accordions</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/charts']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Charts</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/avatars']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Avatars</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/badges']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Badges</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/calendars']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Calendars</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/cards']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Cards</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/carousels']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Carousels</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/checkboxes']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">CheckBoxes</span>
-                </a>
-            </nav>
-
-            <nav data-dev-hint="main navigation">
-                <a [routerLink]="['/dashboard/colorpickers']"
-                    class="flex items-center space-x-2 py-1 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span class="text-xl">Colorpickers</span>
+                    <span class="text-xl">{{item.name}}</span>
                 </a>
             </nav>
 
