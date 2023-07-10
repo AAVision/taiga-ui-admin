@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { RouterModule } from '@angular/router';
@@ -18,8 +18,8 @@ interface NavBarItems {
   standalone: true,
   imports: [
     CommonModule, TuiTabsModule, RouterModule,
-    TuiButtonModule,
-    TuiSvgModule, TuiInputModule, ReactiveFormsModule
+    TuiButtonModule, ReactiveFormsModule, TuiInputModule,
+    TuiSvgModule,
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
@@ -108,6 +108,22 @@ export class DashboardComponent {
       name: "PDF-Viewer",
       routerLink: "/dashboard/pdf-viwer"
     },
+    {
+      id: 18,
+      name: "Scrollbars",
+      routerLink: "/dashboard/scrollbars"
+    },
+    {
+      id: 19,
+      name: "Tables",
+      routerLink: "/dashboard/tables"
+    },
+    {
+      id: 20,
+      name: "Lists",
+      routerLink: "/dashboard/lists"
+    },
   ];
+
 
 }

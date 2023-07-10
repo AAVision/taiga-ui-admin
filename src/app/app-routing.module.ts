@@ -90,6 +90,18 @@ export const routes: Routes = [
         path: 'pdf-viwer',
         loadComponent: () => import('./components/pdf-viewer/pdf-viewer.component').then((m) => m.PdfViewerComponent)
       },
+      {
+        path: 'scrollbars',
+        loadComponent: () => import('./components/scrollbars/scrollbars.component').then((m) => m.ScrollbarsComponent)
+      },
+      {
+        path: 'tables',
+        loadComponent: () => import('./components/tables/tables.component').then((m) => m.TablesComponent)
+      },
+      {
+        path: 'lists',
+        loadComponent: () => import('./components/lists/lists.component').then((m) => m.ListsComponent)
+      },
     ]
   }
 ];

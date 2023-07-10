@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TuiRootModule, TuiDialogModule, TuiAlertModule } from '@taiga-ui/core';
 
@@ -16,10 +16,14 @@ import { TuiRootModule, TuiDialogModule, TuiAlertModule } from '@taiga-ui/core';
     TuiAlertModule,
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'taiga-ui-admin';
 
 
   constructor() { }
+
+  ngOnInit(): void {
+ 
+  }
 
 }

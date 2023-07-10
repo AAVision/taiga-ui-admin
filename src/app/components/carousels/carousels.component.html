@@ -1,16 +1,16 @@
-<h1 class="mb-6 text-2xl font-semibold text-gray-900">Cards</h1>
+<h1 class="mb-6 text-2xl font-semibold text-gray-900">Carousals</h1>
 
 <div class="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8">
 
     <div
         class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
         <div>
-            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+            <h2 class="pb-3 text-xl font-semibold text-gray-900">
                 Basic
             </h2>
 
-            <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
-                <tui-carousel [duration]="4000" [(index)]="index">
+            <div class="mt-4">
+                <tui-carousel [duration]="4000" [(index)]="index"  class="w-1/2">
                     <ng-container *ngFor="let item of items">
                         <tui-island *tuiItem>
                             <h2 class="tui-island__title">{{ item }}</h2>
@@ -34,7 +34,7 @@
     <div
         class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
         <div>
-            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+            <h2 class="pb-3 text-xl font-semibold text-gray-900">
                 Custom
             </h2>
 
@@ -84,7 +84,7 @@
     <div
         class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
         <div>
-            <h2 class="pb-6 text-xl font-semibold text-gray-900">
+            <h2 class="pb-3 text-xl font-semibold text-gray-900">
                 Carousel inside dialog
             </h2>
 
