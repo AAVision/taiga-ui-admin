@@ -11,6 +11,8 @@ import { TUI_IS_MOBILE } from '@taiga-ui/cdk';
 import { TUI_ARROW } from '@taiga-ui/kit';
 import { TuiDropdownModule } from '@taiga-ui/core';
 import { TuiHostedDropdownModule } from '@taiga-ui/core';
+import { TuiLinkModule } from '@taiga-ui/core';
+
 interface NavBarItems {
   id: number,
   name: string,
@@ -24,7 +26,7 @@ interface NavBarItems {
     CommonModule, TuiTabsModule, RouterModule,
     TuiButtonModule, ReactiveFormsModule, TuiInputModule,
     TuiSvgModule, TuiDataListModule, TuiDropdownModule,
-    TuiHostedDropdownModule,
+    TuiHostedDropdownModule, TuiLinkModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],

@@ -1,4 +1,4 @@
-<tui-hosted-dropdown class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 sm:hidden"
+<tui-hosted-dropdown class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 sm:invisible visible"
     tuiDropdownAlign="left" [tuiDropdownLimitWidth]="isMobile ? 'fixed' : 'min'" [tuiDropdownMaxHeight]="700"
     [content]="content" [(open)]="open">
     <button tuiButton appearance="flat" type="button" [iconRight]="arrow">
@@ -22,8 +22,7 @@
 </ng-template>
 
 
-<aside
-    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
+<aside class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
 
@@ -53,10 +52,14 @@
 </aside>
 
 
-<div class="p-4 sm:ml-64">
-    <div class="p-4 border-red-200 rounded-lg dark:border-red-700 h-full">
+<div class="p-4 sm:ml-64 max-h-screen">
+    <div class="p-4 border-red-200 rounded-lg dark:border-red-700 ">
         <router-outlet></router-outlet>
     </div>
 
-    ccccc
+    <div class="pb-6 text-right pr-6">
+        Created by <a tuiLink target="_blank" href="https://www.github.com/aavision">
+            AAVision
+        </a>
+    </div>
 </div>
