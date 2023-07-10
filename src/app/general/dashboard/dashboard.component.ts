@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { RouterModule } from '@angular/router';
@@ -6,7 +6,11 @@ import { TuiButtonModule } from '@taiga-ui/core';
 import { TuiSvgModule } from '@taiga-ui/core';
 import { TuiInputModule } from '@taiga-ui/kit';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { TuiDataListModule } from '@taiga-ui/core';
+import { TUI_IS_MOBILE } from '@taiga-ui/cdk';
+import { TUI_ARROW } from '@taiga-ui/kit';
+import { TuiDropdownModule } from '@taiga-ui/core';
+import { TuiHostedDropdownModule } from '@taiga-ui/core';
 interface NavBarItems {
   id: number,
   name: string,
@@ -19,14 +23,24 @@ interface NavBarItems {
   imports: [
     CommonModule, TuiTabsModule, RouterModule,
     TuiButtonModule, ReactiveFormsModule, TuiInputModule,
-    TuiSvgModule,
+    TuiSvgModule, TuiDataListModule, TuiDropdownModule,
+    TuiHostedDropdownModule,
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 
 })
-export class DashboardComponent {
+export class DashboardComponent implements AfterViewInit {
+
+  constructor(@Inject(TUI_IS_MOBILE) readonly isMobile: boolean) { }
+
+  readonly arrow = TUI_ARROW;
+  open: boolean;
+
+  ngAfterViewInit(): void {
+    this.open = false;
+  }
 
   items: NavBarItems[] = [
     {
@@ -123,7 +137,16 @@ export class DashboardComponent {
       name: "Lists",
       routerLink: "/dashboard/lists"
     },
+    {
+      id: 21,
+      name: "Login",
+      routerLink: "/login"
+    },
+    {
+      id: 22,
+      name: "Register",
+      routerLink: "/register"
+    },
   ];
-
 
 }
