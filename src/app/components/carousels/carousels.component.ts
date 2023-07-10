@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiCarouselModule, TuiIslandModule, TuiMarkerIconModule, TuiPaginationModule } from '@taiga-ui/kit';
 import { TuiMoneyModule } from '@taiga-ui/addon-commerce';
-import { TuiButtonModule, TuiDialogModule, TuiLoaderModule } from '@taiga-ui/core';
+import { TuiButtonModule, TuiDialogModule, TuiLinkModule, TuiLoaderModule } from '@taiga-ui/core';
 
 @Component({
   selector: 'app-carousels',
@@ -10,7 +10,8 @@ import { TuiButtonModule, TuiDialogModule, TuiLoaderModule } from '@taiga-ui/cor
   imports: [
     CommonModule, TuiCarouselModule, TuiIslandModule,
     TuiPaginationModule, TuiMoneyModule, TuiLoaderModule,
-    TuiMarkerIconModule, TuiButtonModule, TuiDialogModule
+    TuiMarkerIconModule, TuiButtonModule, TuiDialogModule,
+    TuiLinkModule
   ],
   templateUrl: './carousels.component.html',
   styleUrls: ['./carousels.component.scss'],
@@ -18,23 +19,13 @@ import { TuiButtonModule, TuiDialogModule, TuiLoaderModule } from '@taiga-ui/cor
 
 })
 export class CarouselsComponent {
-  index = 2;
-
-  readonly items = [
-    'John Cleese',
-    'Eric Idle',
-    'Michael Palin',
-    'Graham Chapman',
-    'Terry Gilliam',
-    'Terry Jones',
-  ];
 
   open = false;
 
   index2 = 0;
 
   get background(): string {
-    switch (this.index) {
+    switch (this.index2) {
       case 0:
         return 'url(https://cdn.tvc.ru/pictures/mood/bw/194/22.jpg)';
       case 1:

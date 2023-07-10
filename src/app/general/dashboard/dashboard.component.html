@@ -7,11 +7,22 @@
 </tui-hosted-dropdown>
 
 <ng-template #content>
-    <tui-data-list>
 
-        <a tuiOption [routerLink]="item.routerLink" class="option" (click)="open = false" *ngFor="let item of items">
-            {{item.name}}
-        </a>
+    <!-- <form [formGroup]="searchForm">
+        <tui-input formControlName="search">
+            Search
+            <input tuiTextfield type="text" />
+        </tui-input>
+    </form> -->
+
+    <tui-data-list>
+        <div *ngFor="let item of items">
+            <a tuiOption [routerLink]="item.routerLink" class="option" (click)="open = false" *ngIf="item.active">
+                {{item.name}}
+            </a>
+        </div>
+
+
         <!-- <tui-opt-group *ngFor="let group of groups" [label]="group.label">
             
             <button *ngFor="let item of group.items" tuiOption class="option" (click)="open = false">
@@ -21,35 +32,49 @@
     </tui-data-list>
 </ng-template>
 
+<tui-scrollbar>
+    <aside class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
 
-<aside class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-        <ul class="space-y-2 font-medium">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+            <ul class="space-y-2 font-medium">
 
-            <li>
+                <li>
 
-                <a href="#"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                    title="Your App is cool">
-                    <img src="https://taiga-ui.dev/assets/images/taiga.svg" alt="">
-                    <span class="text-2xl font-extrabold whitespace-nowrap truncate">TaigaUI</span>
-                </a>
+                    <a href="#"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                        [routerLinkActive]="'bg-gray-700'" title="Your App is cool">
+                        <img src="https://taiga-ui.dev/assets/images/taiga.svg" alt="">
+                        <span class="text-base font-extrabold whitespace-nowrap truncate">TaigaUI - Admin</span>
+                    </a>
 
-            </li>
+                </li>
 
-            <hr class="h-px my-8 bg-white border-0 dark:bg-white">
+                <hr class="h-px my-8 bg-white border-0 dark:bg-white">
 
-            <li *ngFor="let item of items">
-                <a [routerLink]="item.routerLink"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <!-- <li>
+                    <form [formGroup]="searchForm">
+                        <tui-input formControlName="search">
+                            Search
+                            <input tuiTextfield type="text" />
+                        </tui-input>
+                    </form>
+                </li> -->
 
-                    <span class="ml-3">{{item.name}}</span>
-                </a>
-            </li>
+                <div *ngFor="let item of items">
+                    <li *ngIf="item.active">
+                        <a [routerLink]="item.routerLink"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <span class="ml-3">{{item.name}}</span>
+                        </a>
+                    </li>
+                </div>
 
-        </ul>
-    </div>
-</aside>
+            </ul>
+        </div>
+
+    </aside>
+</tui-scrollbar>
+
 
 
 <div class="p-4 sm:ml-64 max-h-screen">

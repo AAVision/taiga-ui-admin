@@ -2,84 +2,6 @@
 
 <div class="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8">
 
-    <div
-        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
-        <div>
-            <h2 class="pb-3 text-xl font-semibold text-gray-900">
-                Basic
-            </h2>
-
-            <div class="mt-4">
-                <tui-carousel [duration]="4000" [(index)]="index"  class="w-1/2">
-                    <ng-container *ngFor="let item of items">
-                        <tui-island *tuiItem>
-                            <h2 class="tui-island__title">{{ item }}</h2>
-                            <!-- TODO: update documentation here -->
-                            <a tuiButton href="https://en.wikipedia.org/wiki/{{ item }}">
-                                Wiki
-                            </a>
-                        </tui-island>
-                    </ng-container>
-                </tui-carousel>
-
-                <div class="pt-5 text-center">
-                    <tui-pagination size="s" [length]="items.length" [(index)]="index"></tui-pagination>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <div
-        class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
-        <div>
-            <h2 class="pb-3 text-xl font-semibold text-gray-900">
-                Custom
-            </h2>
-
-            <div class="mt-4 leading-relaxed flex gap-4 flex-wrap">
-                <div tuiCarouselButtons class="flex ">
-                    <button tuiIconButton icon="tuiIconChevronLeftLarge" title="Previous" type="button"
-                        (click)="carousel.prev()"></button>
-                    <tui-carousel #carousel class="carousel">
-                        <tui-island *tuiItem>
-                            <h2 class="tui-island__title">Monty Python and the Holy Grail</h2>
-                            <p>
-                                King Arthur and his Knights of the Round Table embark on a surreal, low-budget search
-                                for the Holy
-                                Grail, encountering many, very silly obstacles.
-                            </p>
-                            <div>
-                                <button tuiButton appearance="primary" type="button">
-                                    Buy $
-                                    <tui-money [value]="12.99"></tui-money>
-                                </button>
-                                <button tuiButton type="button" class="tui-space_left-2">
-                                    Rent $
-                                    <tui-money [value]="4.99"></tui-money>
-                                </button>
-                            </div>
-                        </tui-island>
-                        <tui-island *tuiItem>
-                            <tui-loader></tui-loader>
-                        </tui-island>
-                        <tui-island *tuiItem class="tui-island_text-align_center">
-                            <h2 class="tui-island__title">Failed to load</h2>
-                            <p>
-                                <tui-marker-icon mode="error" src="tuiIconCloseLarge"></tui-marker-icon>
-                            </p>
-                        </tui-island>
-                    </tui-carousel>
-                    <button tuiIconButton type="button" icon="tuiIconChevronRightLarge" title="Next"
-                        (click)="carousel.next()"></button>
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
 
     <div
         class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
@@ -142,3 +64,11 @@
     </div>
 
 </div>
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+<h1 class="text-right mb-6 text-md font-semibold text-gray-900">More Components
+    <a tuiLink href="https://taiga-ui.dev/components/carousel" target="_blank">
+        Carousels
+    </a>
+</h1>
