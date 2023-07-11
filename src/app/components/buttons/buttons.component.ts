@@ -8,6 +8,7 @@ import { TuiSvgModule } from '@taiga-ui/core';
 import { TuiAvatarModule } from '@taiga-ui/kit';
 import { TuiAutoFocusModule } from '@taiga-ui/cdk';
 import { TuiBadgeModule } from '@taiga-ui/kit';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 
 @Component({
@@ -16,10 +17,10 @@ import { TuiBadgeModule } from '@taiga-ui/kit';
   imports: [
     CommonModule, TuiButtonModule, RouterModule,
     TuiLoaderModule, TuiSvgModule, TuiAvatarModule,
-    TuiAutoFocusModule, TuiBadgeModule
+    TuiAutoFocusModule, TuiBadgeModule, GoToComponent
   ],
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
+  templateUrl: './buttons.component.html',
+  styleUrls: ['./buttons.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {

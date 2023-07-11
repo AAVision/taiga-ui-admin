@@ -20,7 +20,7 @@ export const routes: Routes = [
       },
       {
         path: 'buttons',
-        loadComponent: () => import('./components/button/button.component').then((m) => m.ButtonComponent)
+        loadComponent: () => import('./components/buttons/buttons.component').then((m) => m.ButtonComponent)
       },
       {
         path: 'accordions',
@@ -101,6 +101,10 @@ export const routes: Routes = [
       {
         path: 'lists',
         loadComponent: () => import('./components/lists/lists.component').then((m) => m.ListsComponent)
+      },
+      {
+        path: 'steppers',
+        loadComponent: () => import('./components/steppers/steppers.component').then((m) => m.SteppersComponent)
       },
     ]
   }

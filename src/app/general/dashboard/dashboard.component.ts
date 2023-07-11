@@ -166,14 +166,22 @@ export class DashboardComponent implements AfterViewInit {
       routerLink: "/dashboard/lists",
       active: true
     },
+
     {
       id: 21,
+      name: "Steppers",
+      routerLink: "/dashboard/steppers",
+      active: true
+    },
+
+    {
+      id: 25,
       name: "Login",
       routerLink: "/login",
       active: true
     },
     {
-      id: 22,
+      id: 26,
       name: "Register",
       routerLink: "/register",
       active: true

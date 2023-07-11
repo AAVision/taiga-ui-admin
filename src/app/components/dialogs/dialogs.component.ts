@@ -5,10 +5,11 @@ import { PolymorpheusContent } from '@tinkoff/ng-polymorpheus';
 import { TuiMoneyModule } from '@taiga-ui/addon-commerce';
 import { TuiDropdownPortalService, tuiClamp } from '@taiga-ui/cdk';
 import { TuiDialogFormService, TuiInputModule, TuiMarkerIconModule } from '@taiga-ui/kit';
-import { TuiElasticStickyModule } from '@taiga-ui/addon-mobile';
 import { TuiScrollbarModule } from '@taiga-ui/core';
 import { FormsModule } from '@angular/forms';
 import { TuiLinkModule } from '@taiga-ui/core';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
+import { TuiElasticStickyModule } from '@taiga-ui/addon-mobile';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { TuiLinkModule } from '@taiga-ui/core';
     CommonModule, TuiDialogModule, TuiRootModule,
     TuiButtonModule, TuiMoneyModule, TuiMarkerIconModule,
     TuiElasticStickyModule, TuiScrollbarModule, TuiInputModule,
-    FormsModule, TuiLinkModule
+    FormsModule, TuiLinkModule, GoToComponent
   ],
   providers: [TuiDialogFormService],
   templateUrl: './dialogs.component.html',

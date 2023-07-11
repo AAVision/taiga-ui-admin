@@ -6,14 +6,14 @@ import { TuiMoneyModule } from '@taiga-ui/addon-commerce';
 import { TuiHintModule } from '@taiga-ui/core';
 import { TuiRingChartModule } from '@taiga-ui/addon-charts';
 import { tuiSum } from '@taiga-ui/cdk';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 @Component({
   selector: 'app-charts',
   standalone: true,
   imports: [
     CommonModule, TuiPieChartModule, TuiMoneyModule,
-    TuiHintModule, TuiRingChartModule
-
+    TuiHintModule, TuiRingChartModule, GoToComponent
   ],
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.scss'],

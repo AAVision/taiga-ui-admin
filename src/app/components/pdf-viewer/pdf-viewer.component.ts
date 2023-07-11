@@ -5,13 +5,14 @@ import { TUI_IS_MOBILE } from '@taiga-ui/cdk';
 import { TuiButtonModule, TuiNotificationModule } from '@taiga-ui/core';
 import { TuiPdfViewerModule, TuiPdfViewerOptions, TuiPdfViewerService } from '@taiga-ui/kit';
 import { PolymorpheusContent } from '@tinkoff/ng-polymorpheus';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 @Component({
   selector: 'app-pdf-viewer',
   standalone: true,
   imports: [
     CommonModule, TuiPdfViewerModule, TuiNotificationModule,
-    TuiButtonModule
+    TuiButtonModule, GoToComponent
   ],
   templateUrl: './pdf-viewer.component.html',
   styleUrls: ['./pdf-viewer.component.scss'],

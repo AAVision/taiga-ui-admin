@@ -7,69 +7,63 @@
             Basic
         </h2>
 
-        <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
-            <div class="container">
-                <div class="tui-row">
-                    <div class="tui-col_md-4">
-                        <tui-island>
-                            <p class="tui-island__category">category</p>
-                            <h3 class="tui-island__title">Some heading</h3>
+        <div class="mt-4">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+                <tui-island>
+                    <p class="tui-island__category">category</p>
+                    <h3 class="tui-island__title">Some heading</h3>
+                    <p class="tui-island__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                    <p class="tui-island__paragraph tui-island__paragraph_link">
+                        <a href="/" tuiLink>
+                            Link
+                        </a>
+                    </p>
+                </tui-island>
+
+
+                <tui-island>
+                    <h3 class="tui-island__title">Title</h3>
+                    <p class="tui-island__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                    <button tuiButton type="button" appearance="flat" size="m" class="tui-island__footer-button">
+                        Button
+                    </button>
+                </tui-island>
+
+
+                <tui-island>
+                    <div class="tui-island__content">
+                        <figure class="tui-island__figure">
+                            <div class="some-figure"></div>
+                        </figure>
+                        <div>
                             <p class="tui-island__paragraph">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore
-                                et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor
+                                incididunt ut
+                                labore et dolore magna aliqua.
                             </p>
                             <p class="tui-island__paragraph tui-island__paragraph_link">
                                 <a href="/" tuiLink>
-                                    Link
+                                    Fill some papers
                                 </a>
                             </p>
-                        </tui-island>
+                        </div>
                     </div>
-                    <div class="tui-col_md-4">
-                        <tui-island>
-                            <h3 class="tui-island__title">Title</h3>
-                            <p class="tui-island__paragraph">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore
-                                et dolore magna aliqua.
-                            </p>
-                            <button tuiButton type="button" appearance="flat" size="m"
-                                class="tui-island__footer-button">
-                                Button
-                            </button>
-                        </tui-island>
-                    </div>
-                    <div class="tui-col_md-4">
-                        <tui-island>
-                            <div class="tui-island__content">
-                                <figure class="tui-island__figure">
-                                    <div class="some-figure"></div>
-                                </figure>
-                                <div>
-                                    <p class="tui-island__paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua.
-                                    </p>
-                                    <p class="tui-island__paragraph tui-island__paragraph_link">
-                                        <a href="/" tuiLink>
-                                            Fill some papers
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </tui-island>
-                    </div>
-                </div>
+                </tui-island>
             </div>
-
         </div>
     </div>
-
 </div>
-
-
 
 <div
     class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043] z-1">
@@ -78,85 +72,73 @@
             Many options
         </h2>
 
-        <div class="mt-4 leading-relaxed flex gap-1 flex-wrap">
-            <div class="container">
-                <div class="tui-row">
-                    <div class="tui-col_md-4">
-                        <tui-island size="l">
-                            <div class="tui-island__content">
-                                <div class="tui-island__figure">
-                                    <form [formGroup]="testForm">
-                                        <tui-toggle size="l" formControlName="testValue"></tui-toggle>
-                                    </form>
-                                </div>
-                                <div>
-                                    <p class="tui-island__category">Section</p>
-                                    <h3 class="tui-island__title">Title</h3>
-                                    <p class="tui-island__paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua.
-                                    </p>
-                                    <p class="tui-island__paragraph tui-island__paragraph_link">
-                                        <a href="/" tuiLink>
-                                            Link
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </tui-island>
-                    </div>
-                    <div class="tui-col_md-4">
-                        <a size="l" href="http://ng-web-apis.github.io/" tuiIsland target="_blank" rel="noreferrer"
-                            [hoverable]="true">
-                            <div class="tui-island__content">
-                                <figure class="tui-island__figure">
-                                    <div class="some-figure"></div>
-                                </figure>
-                                <div>
-                                    <h3 class="tui-island__title">Credit card</h3>
-                                    <p class="tui-island__paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="tui-col_md-4">
-                        <tui-island size="l" textAlign="center">
-                            <div class="tui-island__content">
-                                <figure class="tui-island__figure">
-                                    <div class="some-figure"></div>
-                                </figure>
-                                <div>
-                                    <h3 class="tui-island__title">Debit card</h3>
-                                    <p class="tui-island__paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua.
-                                    </p>
-                                    <button tuiButton type="button" appearance="flat" size="m"
-                                        class="tui-island__footer-button">
-                                        Button
-                                    </button>
-                                </div>
-                            </div>
-                        </tui-island>
-                    </div>
-                </div>
-            </div>
+        <div class="mt-4">
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <tui-island size="l">
+                    <div class="tui-island__content">
+                        <div class="tui-island__figure">
+                            <form [formGroup]="testForm">
+                                <tui-toggle size="l" formControlName="testValue"></tui-toggle>
+                            </form>
+                        </div>
+                        <div>
+                            <p class="tui-island__category">Section</p>
+                            <h3 class="tui-island__title">Title</h3>
+                            <p class="tui-island__paragraph">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua.
+                            </p>
+                            <p class="tui-island__paragraph tui-island__paragraph_link">
+                                <a href="/" tuiLink>
+                                    Link
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </tui-island>
+
+                <a size="l" href="http://ng-web-apis.github.io/" tuiIsland target="_blank" rel="noreferrer"
+                    [hoverable]="true">
+                    <div class="tui-island__content">
+                        <figure class="tui-island__figure">
+                            <div class="some-figure"></div>
+                        </figure>
+                        <div>
+                            <h3 class="tui-island__title">Credit card</h3>
+                            <p class="tui-island__paragraph">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <tui-island size="l" textAlign="center">
+                    <div class="tui-island__content">
+                        <figure class="tui-island__figure">
+                            <div class="some-figure"></div>
+                        </figure>
+                        <div>
+                            <h3 class="tui-island__title">Debit card</h3>
+                            <p class="tui-island__paragraph">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua.
+                            </p>
+                            <button tuiButton type="button" appearance="flat" size="m"
+                                class="tui-island__footer-button">
+                                Button
+                            </button>
+                        </div>
+                    </div>
+                </tui-island>
+            </div>
         </div>
     </div>
 
 </div>
 
-<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-
-<h1 class="text-right mb-6 text-md font-semibold text-gray-900">More Components
-    <a tuiLink href="https://taiga-ui.dev/components/island" target="_blank">
-        Islands
-    </a>
-</h1>
+<app-go-to [name]="'Islands'" [url]="'https://taiga-ui.dev/components/island'"></app-go-to>

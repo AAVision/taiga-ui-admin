@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiAvatarModule } from '@taiga-ui/kit';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 @Component({
   selector: 'app-avatars',
   standalone: true,
   imports: [
-    CommonModule, TuiAvatarModule
+    CommonModule, TuiAvatarModule, GoToComponent
   ],
   templateUrl: './avatars.component.html',
   styleUrls: ['./avatars.component.scss'],
@@ -22,6 +23,6 @@ export class AvatarsComponent {
     'Joe Pesci',
   ];
 
-  readonly waterplea = 'https://avatars.githubusercontent.com/u/11832552?v=4';
+  readonly aavision = 'https://avatars.githubusercontent.com/u/75311052?s=400&u=8ab7537f208eef286a644cd19466cfd92b1edda7&v=4';
 
 }

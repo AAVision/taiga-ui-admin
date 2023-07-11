@@ -1,27 +1,36 @@
 # TaigaUiAdmin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+TaigaUi Admin is an admin panel based on the Taiga Ui kit and components library!
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The current version of angular is 16.1.4.
 
-## Code scaffolding
+Run `npm i` and then hit ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project structure
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The project was bootstraped from `main.ts` using AppComponent, and a few components were added to it from `https://taiga-ui.dev/` documentation.
 
-## Running unit tests
+- components folder contains every standalone component separately.
+- general folder contains the login/register and dashboard components.
+- `tailwindcss 3.3.2` was used for adding designs.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contributions 
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-## Further help
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make the necessary changes and commit them.
+- Push your changes to your fork.
+- Submit a pull request describing your changes.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Hints
+
+You can generate a standalone component in the `components` folder, add it to `app-routing.module.ts` file, and add it to the navbar object in the `dashboard.component.ts` file.
+
+## License
+This project is licensed under the [MIT License](https://github.com/AAVision/taiga-ui-admin/blob/main/LICENSE). See the [LICENSE](https://github.com/AAVision/taiga-ui-admin/blob/main/LICENSE) file for details.

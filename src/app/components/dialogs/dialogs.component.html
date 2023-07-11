@@ -72,7 +72,7 @@
 
                 <button tuiButton type="button" size="m" class="tui-space_right-3 tui-space_bottom-2"
                     (click)="showDialog3(long, button)">
-                    Show long mobile dialog with filters
+                    Show long mobile dialog
                 </button>
 
                 <ng-template #button>
@@ -129,13 +129,9 @@
                         </p>
                     </blockquote>
                 </ng-template>
-
             </div>
-
         </div>
-
     </div>
-
     <div
         class="scale-100 p-6 mb-3 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex focus:outline focus:outline-2 focus:outline-[#ff7043]">
         <div>
@@ -159,15 +155,7 @@
 
             </div>
         </div>
-
     </div>
-
 </div>
 
-<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-
-<h1 class="text-right mb-6 text-md font-semibold text-gray-900">More Components
-    <a tuiLink href="https://taiga-ui.dev/components/dialog" target="_blank">
-        Dialogs
-    </a>
-</h1>
+<app-go-to [name]="'Dialogs'" [url]="'https://taiga-ui.dev/components/dialog'"></app-go-to>

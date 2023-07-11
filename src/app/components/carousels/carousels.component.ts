@@ -2,7 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiCarouselModule, TuiIslandModule, TuiMarkerIconModule, TuiPaginationModule } from '@taiga-ui/kit';
 import { TuiMoneyModule } from '@taiga-ui/addon-commerce';
-import { TuiButtonModule, TuiDialogModule, TuiLinkModule, TuiLoaderModule } from '@taiga-ui/core';
+import { TuiButtonModule, TuiDialogModule, TuiLoaderModule } from '@taiga-ui/core';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 @Component({
   selector: 'app-carousels',
@@ -11,7 +12,7 @@ import { TuiButtonModule, TuiDialogModule, TuiLinkModule, TuiLoaderModule } from
     CommonModule, TuiCarouselModule, TuiIslandModule,
     TuiPaginationModule, TuiMoneyModule, TuiLoaderModule,
     TuiMarkerIconModule, TuiButtonModule, TuiDialogModule,
-    TuiLinkModule
+    GoToComponent
   ],
   templateUrl: './carousels.component.html',
   styleUrls: ['./carousels.component.scss'],

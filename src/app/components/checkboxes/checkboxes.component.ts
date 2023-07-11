@@ -4,6 +4,7 @@ import { TuiAvatarModule, TuiCheckboxModule } from '@taiga-ui/kit';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { TuiCheckboxBlockModule } from '@taiga-ui/kit';
 import { TuiGroupModule, TuiTooltipModule } from '@taiga-ui/core';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 @Component({
   selector: 'app-checkboxes',
@@ -11,7 +12,7 @@ import { TuiGroupModule, TuiTooltipModule } from '@taiga-ui/core';
   imports: [
     CommonModule, TuiCheckboxModule, ReactiveFormsModule,
     TuiCheckboxBlockModule, TuiGroupModule, TuiAvatarModule,
-    TuiTooltipModule
+    TuiTooltipModule, GoToComponent
   ],
   templateUrl: './checkboxes.component.html',
   styleUrls: ['./checkboxes.component.scss'],

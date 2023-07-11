@@ -15,7 +15,7 @@ bootstrapApplication(AppComponent, {
       RouterModule,
       RouterModule.forRoot(routes, {
         useHash: true,
-        // scrollPositionRestoration: 'top'
+        scrollPositionRestoration: 'top'
       }),
 
       TuiRootModule,

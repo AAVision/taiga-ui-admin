@@ -4,6 +4,7 @@ import { TuiHintModule, TuiLabelModule, TuiTooltipModule } from '@taiga-ui/core'
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TuiInputModule } from '@taiga-ui/kit';
 import { TuiTextfieldControllerModule } from '@taiga-ui/core';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 @Component({
   selector: 'app-labels',
@@ -11,7 +12,7 @@ import { TuiTextfieldControllerModule } from '@taiga-ui/core';
   imports: [
     CommonModule, TuiLabelModule, TuiHintModule,
     TuiInputModule, ReactiveFormsModule, TuiTooltipModule,
-    TuiTextfieldControllerModule
+    TuiTextfieldControllerModule, GoToComponent
   ],
   templateUrl: './labels.component.html',
   styleUrls: ['./labels.component.scss'],

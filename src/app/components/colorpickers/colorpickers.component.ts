@@ -8,6 +8,7 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { BehaviorSubject } from 'rxjs';
 import { TuiHostedDropdownModule } from '@taiga-ui/core';
 import { TuiActiveZoneModule } from '@taiga-ui/cdk';
+import { GoToComponent } from 'src/app/helpers/go-to/go-to.component';
 
 @Component({
   selector: 'app-colorpickers',
@@ -17,7 +18,7 @@ import { TuiActiveZoneModule } from '@taiga-ui/cdk';
     FormsModule, TuiColorEditModule, TuiInputModule,
     TuiColorPickerModule, TuiInputColorModule, TuiColorSelectorModule,
     TuiSvgModule, TuiHostedDropdownModule, TuiActiveZoneModule,
-    TuiButtonModule
+    TuiButtonModule, GoToComponent
   ],
   templateUrl: './colorpickers.component.html',
   styleUrls: ['./colorpickers.component.scss'],
