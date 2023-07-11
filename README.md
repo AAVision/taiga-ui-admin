@@ -6,7 +6,7 @@ TaigaUi Admin is an admin panel based on the Taiga Ui kit and components library
 
 The current version of angular is 16.1.4.
 
-Run `npm i` and then hit ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm i` and then hit `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Project structure
 
