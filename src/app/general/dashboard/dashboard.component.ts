@@ -2,7 +2,7 @@ import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, OnDestroy, O
 import { CommonModule } from '@angular/common';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { RouterModule } from '@angular/router';
-import { TuiButtonModule, TuiLoaderModule } from '@taiga-ui/core';
+import { TuiButtonModule } from '@taiga-ui/core';
 import { TuiSvgModule } from '@taiga-ui/core';
 import { TuiInputModule } from '@taiga-ui/kit';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
@@ -29,8 +29,7 @@ interface NavBarItems {
     CommonModule, TuiTabsModule, RouterModule,
     TuiButtonModule, ReactiveFormsModule, TuiInputModule,
     TuiSvgModule, TuiDataListModule, TuiDropdownModule,
-    TuiHostedDropdownModule, TuiLinkModule, TuiScrollbarModule,
-    TuiLoaderModule
+    TuiHostedDropdownModule, TuiLinkModule, TuiScrollbarModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
@@ -198,7 +197,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
       map((val) => {
         this.tmpItems = this.mainItems;
         this.tmpItems = this.tmpItems.filter((item) => {
-          return item.name.toLowerCase().indexOf(val) != -1
+          return item.name.toLowerCase().indexOf(val.toLowerCase()) != -1
         })
       }),
       takeUntil(this.onDestry$),
