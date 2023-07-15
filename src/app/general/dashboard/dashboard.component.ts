@@ -1,8 +1,8 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { RouterModule } from '@angular/router';
-import { TuiButtonModule } from '@taiga-ui/core';
+import { TuiButtonModule, TuiLoaderModule } from '@taiga-ui/core';
 import { TuiSvgModule } from '@taiga-ui/core';
 import { TuiInputModule } from '@taiga-ui/kit';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
@@ -13,6 +13,7 @@ import { TuiDropdownModule } from '@taiga-ui/core';
 import { TuiHostedDropdownModule } from '@taiga-ui/core';
 import { TuiLinkModule } from '@taiga-ui/core';
 import { TuiScrollbarModule } from '@taiga-ui/core';
+import { Subject, finalize, map, takeUntil } from 'rxjs';
 
 interface NavBarItems {
   id: number,
@@ -28,29 +29,28 @@ interface NavBarItems {
     CommonModule, TuiTabsModule, RouterModule,
     TuiButtonModule, ReactiveFormsModule, TuiInputModule,
     TuiSvgModule, TuiDataListModule, TuiDropdownModule,
-    TuiHostedDropdownModule, TuiLinkModule, TuiScrollbarModule
+    TuiHostedDropdownModule, TuiLinkModule, TuiScrollbarModule,
+    TuiLoaderModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 
 })
-export class DashboardComponent implements AfterViewInit {
+export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  readonly searchForm = new FormGroup({
+  onDestry$: Subject<void> = new Subject();
+  timm: number;
+  searchForm = new FormGroup({
     search: new FormControl(''),
   });
-
-  constructor(@Inject(TUI_IS_MOBILE) readonly isMobile: boolean) { }
 
   readonly arrow = TUI_ARROW;
   open: boolean;
 
-  ngAfterViewInit(): void {
-    this.open = false;
-  }
+  constructor(@Inject(TUI_IS_MOBILE) readonly isMobile: boolean) { }
 
-  items: NavBarItems[] = [
+  mainItems: NavBarItems[] = [
     {
       id: 1,
       name: "Buttons",
@@ -187,5 +187,34 @@ export class DashboardComponent implements AfterViewInit {
       active: true
     },
   ];
+
+  tmpItems: NavBarItems[]
+
+  ngOnInit(): void {
+
+    this.tmpItems = this.mainItems;
+
+    this.searchForm.get("search").valueChanges.pipe(
+      map((val) => {
+        this.tmpItems = this.mainItems;
+        this.tmpItems = this.tmpItems.filter((item) => {
+          return item.name.toLowerCase().indexOf(val) != -1
+        })
+      }),
+      takeUntil(this.onDestry$),
+    ).subscribe()
+
+  }
+
+  ngAfterViewInit(): void {
+    this.open = false;
+  }
+
+  ngOnDestroy(): void {
+    this.onDestry$.next();
+    this.onDestry$.complete();
+  }
+
+
 
 }

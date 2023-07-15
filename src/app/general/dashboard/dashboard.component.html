@@ -8,15 +8,15 @@
 
 <ng-template #content>
 
-    <!-- <form [formGroup]="searchForm">
+    <form [formGroup]="searchForm">
         <tui-input formControlName="search">
             Search
             <input tuiTextfield type="text" />
         </tui-input>
-    </form> -->
+    </form>
 
     <tui-data-list>
-        <div *ngFor="let item of items">
+        <div *ngFor="let item of tmpItems">
             <a tuiOption [routerLink]="item.routerLink" class="option" (click)="open = false" *ngIf="item.active">
                 {{item.name}}
             </a>
@@ -51,23 +51,26 @@
 
                 <hr class="h-px my-8 bg-white border-0 dark:bg-white">
 
-                <!-- <li>
+                <li>
                     <form [formGroup]="searchForm">
                         <tui-input formControlName="search">
                             Search
                             <input tuiTextfield type="text" />
                         </tui-input>
                     </form>
-                </li> -->
+                </li>
 
-                <div *ngFor="let item of items">
-                    <li *ngIf="item.active">
-                        <a [routerLink]="item.routerLink"
-                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <span class="ml-3">{{item.name}}</span>
-                        </a>
-                    </li>
-                </div>
+                <ng-container>
+                    <div *ngFor="let item of tmpItems">
+                        <li *ngIf="item.active">
+                            <a [routerLink]="item.routerLink"
+                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <span class="ml-3">{{item.name}}</span>
+                            </a>
+                        </li>
+                    </div>
+                </ng-container>
+
 
             </ul>
         </div>
